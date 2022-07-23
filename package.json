@@ -1,0 +1,13 @@
+{
+  "name": "fibonacci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:node": "node nodejs/http-server.js",
+    "start:bun": "bun run bunjs/http-server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

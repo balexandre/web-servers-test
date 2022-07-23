@@ -1,0 +1,15 @@
+### the 4 webservers output
+
+### nodeJs
+GET http://localhost:9081/fibonacci
+
+### bunJs
+GET http://localhost:3001/fibonacci
+
+### .NET Core
+GET http://localhost:5000/fibonacci
+
+### Go
+GET http://localhost:8090/fibonacci
+### Go
+GET http://localhost:8090/
