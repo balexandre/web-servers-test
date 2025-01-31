@@ -58,6 +58,7 @@ using `npx autocannon -c 10 -d 100 <URL>`
 | NodeJs 14 | http://localhost:3001/fibonacci | `7335.20 ms` | `1.19` |
 | NodeJs 16 | http://localhost:3001/fibonacci | `8544.05 ms` | `1.16` |
 | BunJs 0.1.4 | http://localhost:3002/fibonacci | `4002.40 ms` | `2.46` |
+| BunJs 1.2.1 | http://localhost:3002/fibonacci | `3773.63 ms` | `2.59` |
 | Go 1.18.4 | http://localhost:3003/fibonacci | `621.22 ms` | `16.03` |
 | .NET Core 3.1.421 | http://localhost:3004/fibonacci | `1728.94 ms` | `5.71` |
 | .NET Core 8.0.12 | http://localhost:3006/fibonacci | `1807.03 ms` | `5.5` |
@@ -132,3 +133,11 @@ test machine specs: i7-8700K CPU @ 3.70GHz with 32Gb on Windows 11 Pro 21H2, via
 | -- | -- | -- | -- | -- | -- | -- | -- |
 | Req/Sec   | 0   | 0    | 6       | 10      | 5.5   | 3.5   | 1     |
 | Bytes/Sec | 0 B | 0 B  | 1.03 kB | 1.72 kB | 946 B | 601 B | 172 B |
+
+## Conclusion
+
+This test does not really test the output of a web server, but the way they handle the `fibonacci(40)` sequence
+
+To really test the server, the reply should be simpler, so it measures the web server response times and not how long does it take to run the answer 😊
+
+...curious how it handles `fibonacci(5)`? [check the answer](FIBONACCI5.md)
