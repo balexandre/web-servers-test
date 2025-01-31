@@ -26,15 +26,27 @@ assuming you have the 4 installed
 
 you can run them, from the directory of this project, as
 
-- NodeJS `npm run start:node`
-- BunJs `npm run start:bun`
-- Go `go run go/http-server.go`
-
-
-- .NET Core, you need to build it first
+- NodeJS 
 ```
-dotnet build
-dotnet run
+npm run start:node
+```
+- BunJs 
+```
+npm run start:bun
+```
+- Go 
+```
+go run go/http-server.go
+```
+- .NET Core 3, you need to build it first
+```
+dotnet build dotNetCore3/fibonacci.csproj
+dotnet run --project dotNetCore3/fibonacci.csproj
+```
+- .NET Core 8, you need to build it first
+```
+dotnet build dotNet8/fibonacci.csproj
+dotnet run --project dotNet8/fibonacci.csproj
 ```
 
 ## Results (average)
@@ -48,6 +60,7 @@ using `npx autocannon -c 10 -d 100 <URL>`
 | BunJs 0.1.4 | http://localhost:3002/fibonacci | `4002.40 ms` | `2.46` |
 | Go 1.18.4 | http://localhost:3003/fibonacci | `621.22 ms` | `16.03` |
 | .NET Core 3.1.421 | http://localhost:3004/fibonacci | `1728.94 ms` | `5.71` |
+| .NET Core 8.0.12 | http://localhost:3006/fibonacci | `1807.03 ms` | `5.5` |
 
 test machine specs: i7-8700K CPU @ 3.70GHz with 32Gb on Windows 11 Pro 21H2, via WSL2 - Ubuntu 20.04
 
@@ -108,3 +121,14 @@ test machine specs: i7-8700K CPU @ 3.70GHz with 32Gb on Windows 11 Pro 21H2, via
 | -- | -- | -- | -- | -- | -- | -- | -- |
 | Req/Sec   | 0   | 0    | 6       | 10      | 5.71  | 3.75  | 1     |
 | Bytes/Sec | 0 B | 0 B  | 1.03 kB | 1.72 kB | 982 B | 644 B | 172 B |
+
+### .NET Core 8.0.12
+
+| Stat | 2.5% | 50% | 97.5% | 99% | Avg | Stdev | Max |
+| -- | -- | -- | -- | -- | -- | -- | -- |
+| Latency | 1677 ms | 1795 ms | 2053 ms | 2164 ms | 1807.03 ms | 92.19 ms | 2386 ms |
+
+| Stat      | 1%  | 2.5% | 50%     | 97.5%   | Avg   | Stdev | Min   |
+| -- | -- | -- | -- | -- | -- | -- | -- |
+| Req/Sec   | 0   | 0    | 6       | 10      | 5.5   | 3.5   | 1     |
+| Bytes/Sec | 0 B | 0 B  | 1.03 kB | 1.72 kB | 946 B | 601 B | 172 B |
