@@ -1,3 +1,3 @@
-/**/bin/* 		# .NET: Ignore all files in any bin directory
-/**/obj/* 		# .NET: Ignore all files in any obj directory
+**/bin/* 		# .NET: Ignore all files in any bin directory
+**/obj/* 		# .NET: Ignore all files in any obj directory
 node_modules/* 	# NodeJs: Ignore all files in any node_modules directory
