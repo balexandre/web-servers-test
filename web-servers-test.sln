@@ -4,7 +4,7 @@ VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotNetCore3", "dotNetCore3\fibonacci.csproj", "{50CA4BD7-47AA-E224-3BEE-070A4BDE479F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotNetCore8", "dotNetCore8\dotNet8.csproj", "{71539321-8277-07A0-81FA-98595640DA5F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotNetCore8", "dotNetCore8\fibonacci.csproj", "{71539321-8277-07A0-81FA-98595640DA5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
